@@ -5,7 +5,8 @@ import erevacation.com.userlist.R
 import erevacation.com.userlist.basic.BasicFragment
 import erevacation.com.userlist.databinding.FragmentProfileBinding
 
-class ProfileFragment : BasicFragment<ProfileContract.ProfilePresenter, FragmentProfileBinding>(), ProfileContract.ProfileView {
+class ProfileFragment : BasicFragment<ProfileContract.ProfilePresenter, FragmentProfileBinding>()
+        ,ProfileContract.ProfileView {
 
     override fun getLayoutId(): Int = R.layout.fragment_profile
 

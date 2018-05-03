@@ -11,7 +11,7 @@ import com.erevacation.widgets.databinding.CardProfileBinding
 
 class ProfileCard : FrameLayout {
 
-    var binding : CardProfileBinding? = null
+   private lateinit var binding : CardProfileBinding
     constructor(context: Context?) : this(context, null)
 
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -25,15 +25,15 @@ class ProfileCard : FrameLayout {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.card_profile, this, false)
 
-        val view = binding?.root
+        val view = binding.root
 
         this.addView(view)
 
     }
 
     fun setListApperance(image:String, name:String, email:String) {
-        binding?.name?.text = name
-        binding?.email?.text = email
-        binding?.profileImage?.setImageURI(Uri.parse(image))
+        binding.name.text = name
+        binding.email.text = email
+        binding.profileImage.setImageURI(Uri.parse(image))
     }
 }

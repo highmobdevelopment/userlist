@@ -16,7 +16,7 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
     private var binding: ActivityHomeBinding? = null
     private lateinit var fragmentManager: FragmentManager
     private var listFragment: ListFragment = ListFragment()
-    private var profileFragment : ProfileFragment = ProfileFragment()
+    private var profileFragment : ProfileFragment = ProfileFragment.newInstance()
     private lateinit var adapter: ViewPagerAdapter
 
 

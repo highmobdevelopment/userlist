@@ -5,15 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import erevacation.com.userlist.databinding.ViewHolderProfileBinding
 
-class ProfileRecyclerAdapter (val presenter: ProfileFragmentPresenter) : RecyclerView.Adapter<ProfileRecyclerAdapter.ProfileViewHolder>() {
+class ProfileRecyclerAdapter (val presenter: ProfileFragmentPresenter)
+    : RecyclerView.Adapter<ProfileRecyclerAdapter.ProfileViewHolder>() {
 
-    var names: MutableList<String> = mutableListOf("Djordje Moljkovic")
-    var email: MutableList<String> = mutableListOf("djmoljkovic@gmail.com")
-    var location: MutableList<String> = mutableListOf("Kremna")
+    private var names: MutableList<String> = mutableListOf("Djordje Moljkovic")
+    private var email: MutableList<String> = mutableListOf("djmoljkovic@gmail.com")
+    private var location: MutableList<String> = mutableListOf("Kremna")
 
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ProfileViewHolder {
-        val binding = ViewHolderProfileBinding.inflate(LayoutInflater.from(parent?.context), parent, false)
+        val binding = ViewHolderProfileBinding.inflate(LayoutInflater.from(parent?.context), parent,false)
+
         return ProfileViewHolder(binding)
     }
 
