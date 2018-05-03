@@ -1,0 +1,5 @@
+<resources>
+    <string name="req_card_video_btn">VIDEO</string>
+    <string name="req_card_photo_btn">PHOTO</string>
+    <string name="test_text">Test Text</string>
+</resources>
