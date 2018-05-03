@@ -1,10 +1,6 @@
 package erevacation.com.userlist.ui.homescreen
 
-import android.app.Fragment
 import android.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
-import android.view.MenuItem
-import erevacation.com.userlist.R
 import erevacation.com.userlist.basic.arhitecture.ViperContract
 import erevacation.com.userlist.databinding.ActivityHomeBinding
 import erevacation.com.userlist.ui.homescreen.adapter.ViewPagerAdapter
@@ -14,13 +10,12 @@ import javax.inject.Inject
 class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
 
 
-
     private val TAG: String = "HomeActivityPresenter"
     private var view: HomeContract.HomeView? = null
     private var binding: ActivityHomeBinding? = null
     private lateinit var fragmentManager: FragmentManager
     private var listFragment: ListFragment = ListFragment()
-    private var adapter: ViewPagerAdapter? = null
+    private lateinit var adapter: ViewPagerAdapter
 
 
     // overrides that every presenter have
@@ -32,6 +27,7 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
         setupViewPager()
         buildLayout()
     }
+
     override fun viewDetach() {
         this.view = null
         this.binding = null
@@ -47,7 +43,7 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
     }
 
     private fun setupViewPager() {
-        adapter?.addFragment(listFragment)
+        adapter.addFragment(listFragment)
         binding?.viewpager?.adapter = adapter
 
     }
