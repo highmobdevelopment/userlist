@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import erevacation.com.userlist.databinding.ViewHolderListBinding
 
-class ListRecyclerAdapter(val presenter:ListFragmentPresenter) : RecyclerView.Adapter<ListRecyclerAdapter.ListViewHolder>() {
+class ListRecyclerAdapter(val presenter:ListFragmentPresenter)
+    : RecyclerView.Adapter<ListRecyclerAdapter.ListViewHolder>() {
 
     private val listInfo: MutableList<String> = mutableListOf("John","Jack","Mark","Joshua","Robert")
 
