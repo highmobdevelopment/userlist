@@ -7,7 +7,7 @@ import erevacation.com.userlist.databinding.ViewHolderListBinding
 
 class ListRecyclerAdapter() : RecyclerView.Adapter<ListRecyclerAdapter.ListViewHolder>() {
 
-    var listInfo: MutableList<String> = mutableListOf()
+    private val listInfo: MutableList<String> = mutableListOf()
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
 

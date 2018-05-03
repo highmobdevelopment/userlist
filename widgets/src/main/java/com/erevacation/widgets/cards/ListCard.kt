@@ -12,7 +12,7 @@ import com.erevacation.widgets.databinding.CardListBinding
 
 class ListCard : FrameLayout {
 
-    var binding : CardListBinding? = null
+    private lateinit var binding : CardListBinding
     constructor(context: Context?) : this(context, null)
 
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -26,7 +26,7 @@ class ListCard : FrameLayout {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.card_list, this, false)
 
-        val view = binding?.root
+        val view = binding.root
 
         this.addView(view)
 

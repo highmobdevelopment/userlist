@@ -1,8 +1,5 @@
 package erevacation.com.userlist.ui.homescreen.list
 
-import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import erevacation.com.userlist.R
 import erevacation.com.userlist.basic.BasicFragment
 import erevacation.com.userlist.databinding.FragmentListBinding

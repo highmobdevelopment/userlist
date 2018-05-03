@@ -20,7 +20,7 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
     private var binding: ActivityHomeBinding? = null
     private lateinit var fragmentManager: FragmentManager
     private var listFragment: ListFragment = ListFragment()
-    private var adapter: ViewPagerAdapter? = null
+    private lateinit var adapter: ViewPagerAdapter
 
 
     // overrides that every presenter have
