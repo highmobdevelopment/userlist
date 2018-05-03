@@ -32,4 +32,7 @@ class ListCard : FrameLayout {
 
     }
 
+    fun setListApperance(list :String) {
+        binding.profileText.text = list
+    }
 }

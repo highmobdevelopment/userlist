@@ -5,12 +5,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import erevacation.com.userlist.databinding.ViewHolderListBinding
 
-class ListRecyclerAdapter() : RecyclerView.Adapter<ListRecyclerAdapter.ListViewHolder>() {
+class ListRecyclerAdapter(val presenter:ListFragmentPresenter) : RecyclerView.Adapter<ListRecyclerAdapter.ListViewHolder>() {
 
-    private val listInfo: MutableList<String> = mutableListOf()
+    private val listInfo: MutableList<String> = mutableListOf("John","Jack","Mark","Joshua","Robert")
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-
+        holder.bindList(listInfo[position])
+        holder.binding.listFragmentCard.setOnClickListener {
+            presenter.onListCardClick()
+        }
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
@@ -23,7 +26,11 @@ class ListRecyclerAdapter() : RecyclerView.Adapter<ListRecyclerAdapter.ListViewH
     }
 
     class ListViewHolder(binding: ViewHolderListBinding) : RecyclerView.ViewHolder(binding.root) {
+        val binding = binding
 
+        fun bindList(list : String) {
+            binding.listFragmentCard.setListApperance(list)
+        }
     }
 }
 
