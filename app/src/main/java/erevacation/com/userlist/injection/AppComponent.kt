@@ -10,7 +10,10 @@ import erevacation.com.userlist.injection.modules.AppModule
 import erevacation.com.userlist.injection.modules.NetModule
 
 
-@Component(modules = [(AndroidInjectionModule::class), (AppModule::class), (NetModule::class), (ActivityBuilder::class)])
+@Component(modules = [(AndroidInjectionModule::class)
+          ,(AppModule::class)
+          ,(NetModule::class)
+          ,(ActivityBuilder::class)])
 
 interface AppComponent {
 
