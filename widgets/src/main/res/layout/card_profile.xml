@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="120dp"
+            android:src="@drawable/smiley"
+            android:background="@color/gray"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            tools:text="Djordje Moljkovic"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            tools:text="djolekralj@gmail.com"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            tools:text="Kremna City"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</layout>
