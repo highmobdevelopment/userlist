@@ -19,7 +19,7 @@ class ProfileFragment : BasicFragment<ProfileContract.ProfilePresenter, Fragment
 
     companion object {
         private val USER = "user"
-        const val PROFILE_FRAGMENT_TAG: String = "THEME_FRAGMENT_TAG"
+        const val PROFILE_FRAGMENT_TAG: String = "PROFILE_FRAGMENT_TAG"
         fun newInstance(user :String): ProfileFragment {
             val args: Bundle = Bundle()
             args.putSerializable(USER,user)
