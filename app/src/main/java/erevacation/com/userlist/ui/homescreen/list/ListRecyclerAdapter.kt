@@ -13,7 +13,7 @@ class ListRecyclerAdapter(val presenter:ListFragmentPresenter)
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bindList(listInfo[position])
         holder.binding.listFragmentCard.setOnClickListener {
-            presenter.onListCardClick()
+            presenter.openProfileScreen(listInfo[position])
         }
     }
 

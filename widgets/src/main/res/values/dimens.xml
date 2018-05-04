@@ -6,6 +6,8 @@
     <dimen name="margin_padding_size_large">24dp</dimen>
     <dimen name="margin_padding_size_xlarge">32dp</dimen>
     <dimen name="margin_padding_size_xxlarge">40dp</dimen>
+    <dimen name="margin_padding_size_xxxlarge">72dp</dimen>
+    <dimen name="margin_padding_size_xxxxlarge">92dp</dimen>
 
     //text size
     <dimen name="text_size_micro">12sp</dimen>
@@ -18,13 +20,13 @@
     <dimen name="text_size_xxxxlarge">112sp</dimen>
 
     //image size
-    <dimen name="image_size_micro">16sp</dimen>
-    <dimen name="image_size_small">32sp</dimen>
-    <dimen name="image_size_medium">48sp</dimen>
-    <dimen name="image_size_large">64sp</dimen>
-    <dimen name="image_size_xlarge">76sp</dimen>
-    <dimen name="image_size_xxlarge">92sp</dimen>
-    <dimen name="image_size_xxxlarge">128sp</dimen>
-    <dimen name="image_size_xxxxlarge">140sp</dimen>
+    <dimen name="image_size_micro">16dp</dimen>
+    <dimen name="image_size_small">32dp</dimen>
+    <dimen name="image_size_medium">48dp</dimen>
+    <dimen name="image_size_large">64dp</dimen>
+    <dimen name="image_size_xlarge">76dp</dimen>
+    <dimen name="image_size_xxlarge">92dp</dimen>
+    <dimen name="image_size_xxxlarge">128dp</dimen>
+    <dimen name="image_size_xxxxlarge">140dp</dimen>
 
 </resources>

@@ -8,12 +8,21 @@ import erevacation.com.userlist.databinding.FragmentProfileBinding
 class ProfileFragment : BasicFragment<ProfileContract.ProfilePresenter, FragmentProfileBinding>()
         ,ProfileContract.ProfileView {
 
+    var user: String = ""
+
     override fun getLayoutId(): Int = R.layout.fragment_profile
 
+    override fun onStart() {
+        this.user = arguments!!.getString(USER)
+        super.onStart()
+    }
+
     companion object {
+        private val USER = "user"
         const val PROFILE_FRAGMENT_TAG: String = "THEME_FRAGMENT_TAG"
-        fun newInstance(): ProfileFragment {
+        fun newInstance(user :String): ProfileFragment {
             val args: Bundle = Bundle()
+            args.putSerializable(USER,user)
             val fragment = ProfileFragment()
             fragment.arguments = args
             return fragment

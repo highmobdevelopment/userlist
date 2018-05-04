@@ -7,6 +7,6 @@ interface ListContract {
 
     }
     interface ListPresenter : ViperContract.Presenter {
-        fun onListCardClick()
+        fun openProfileScreen(user:String)
     }
 }

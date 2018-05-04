@@ -8,9 +8,9 @@ import erevacation.com.userlist.databinding.ViewHolderProfileBinding
 class ProfileRecyclerAdapter (val presenter: ProfileFragmentPresenter)
     : RecyclerView.Adapter<ProfileRecyclerAdapter.ProfileViewHolder>() {
 
-    private var names: MutableList<String> = mutableListOf("Djordje Moljkovic")
-    private var email: MutableList<String> = mutableListOf("djmoljkovic@gmail.com")
-    private var location: MutableList<String> = mutableListOf("Kremna")
+    private var names: MutableList<String> = mutableListOf()
+    private var email: MutableList<String> = mutableListOf("jdoe@gmail.com")
+    private var location: MutableList<String> = mutableListOf("Kremoneze")
 
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ProfileViewHolder {
@@ -25,6 +25,11 @@ class ProfileRecyclerAdapter (val presenter: ProfileFragmentPresenter)
 
     override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
         holder.bind("",names[position],email[position])
+    }
+
+     fun updateUserDetails(name: String) {
+            names.add(name)
+            notifyDataSetChanged()
     }
 
     class ProfileViewHolder(binding: ViewHolderProfileBinding) : RecyclerView.ViewHolder(binding.root) {
