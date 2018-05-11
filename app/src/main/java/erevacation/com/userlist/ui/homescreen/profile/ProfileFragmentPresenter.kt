@@ -15,6 +15,7 @@ class ProfileFragmentPresenter @Inject constructor() : ProfileContract.ProfilePr
         this.view = view as ProfileContract.ProfileView
         this.binding = (this.view as?ProfileFragment)?.binding
         buildLayout()
+        publishUserDetails((view as ProfileFragment).user)
     }
 
 
@@ -25,6 +26,9 @@ class ProfileFragmentPresenter @Inject constructor() : ProfileContract.ProfilePr
     override fun onDestroyed() {
         this.view = null
         this.binding = null
+    }
+    private fun publishUserDetails(name :String){
+        profileAdapter.updateUserDetails(name)
     }
 
     private fun buildLayout(){

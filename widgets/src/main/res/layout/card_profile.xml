@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
         <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="120dp"
-            android:layout_marginTop="30dp"
-            android:layout_height="120dp"
-            android:src="@drawable/smiley"
-            android:background="@color/gray"
-            android:layout_centerHorizontal="true"/>
+            android:id="@+id/icons"
+            android:layout_width="@dimen/image_size_small"
+            android:layout_height="@dimen/image_size_small"
+            android:layout_marginBottom="@dimen/margin_padding_size_small"
+            android:layout_marginStart="@dimen/margin_padding_size_small"
+            android:layout_marginTop="@dimen/margin_padding_size_small"
+            android:src="@drawable/email_ico"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/profile_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_image"
-            tools:text="Djordje Moljkovic"
-            android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
-        <TextView
-            android:id="@+id/email"
+            android:layout_marginStart="@dimen/margin_padding_size_large"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icons"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="jdoe@gmail.com" />
+
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            tools:text="djolekralj@gmail.com"
-            android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
-        <TextView
-            android:id="@+id/location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/email"
-            tools:text="Kremna City"
-            android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
-    </RelativeLayout>
+            android:layout_height="0.5dp"
+            android:background="@color/black_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icons" />
+
+    </android.support.constraint.ConstraintLayout>
 </layout>

@@ -11,4 +11,6 @@
     <color name="gray"> #b3b3b3</color>
     <color name="black_transparent">#77000000</color>
     <color name="request_gray">#424242</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
 </resources>

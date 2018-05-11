@@ -2,9 +2,11 @@ package erevacation.com.userlist.ui.homescreen.list
 
 import android.support.v4.app.FragmentManager
 import android.support.v7.widget.LinearLayoutManager
+import erevacation.com.userlist.R
 import erevacation.com.userlist.basic.arhitecture.ViperContract
 import erevacation.com.userlist.databinding.FragmentListBinding
 import erevacation.com.userlist.ui.homescreen.HomeActivity
+import erevacation.com.userlist.ui.homescreen.profile.ProfileFragment
 import javax.inject.Inject
 
 class ListFragmentPresenter @Inject constructor() : ListContract.ListPresenter {
@@ -31,7 +33,13 @@ class ListFragmentPresenter @Inject constructor() : ListContract.ListPresenter {
         this.binding = null
     }
 
-    override fun onListCardClick() {
+    override fun openProfileScreen(user: String) {
+        val fragmentProfile = ProfileFragment.newInstance(user)
+        fragmentManager.beginTransaction()
+                .setCustomAnimations(R.animator.right_in, R.animator.fui_slide_out_left, R.animator.fui_slide_in_right, R.animator.right_out)
+                .add(R.id.constrain_activity_home, fragmentProfile)
+                .addToBackStack("contacts_back_stack")
+                .commit()
 
     }
 

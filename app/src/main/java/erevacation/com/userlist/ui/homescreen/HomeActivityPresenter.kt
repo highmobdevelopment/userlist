@@ -5,7 +5,6 @@ import erevacation.com.userlist.basic.arhitecture.ViperContract
 import erevacation.com.userlist.databinding.ActivityHomeBinding
 import erevacation.com.userlist.ui.homescreen.adapter.ViewPagerAdapter
 import erevacation.com.userlist.ui.homescreen.list.ListFragment
-import erevacation.com.userlist.ui.homescreen.profile.ProfileFragment
 import javax.inject.Inject
 
 class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
@@ -16,7 +15,6 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
     private var binding: ActivityHomeBinding? = null
     private lateinit var fragmentManager: FragmentManager
     private var listFragment: ListFragment = ListFragment()
-    private var profileFragment : ProfileFragment = ProfileFragment.newInstance()
     private lateinit var adapter: ViewPagerAdapter
 
 
@@ -46,7 +44,6 @@ class HomeActivityPresenter @Inject constructor() : HomeContract.HomePresenter {
 
     private fun setupViewPager() {
         adapter.addFragment(listFragment)
-        adapter.addFragment(profileFragment)
         binding?.viewpager?.adapter = adapter
 
     }
