@@ -2,20 +2,18 @@ package com.erevacation.widgets.cards
 
 import android.content.Context
 import android.databinding.DataBindingUtil
-import android.net.Uri
-
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.erevacation.widgets.R
 import com.erevacation.widgets.databinding.CardProfileBinding
 
 
 class ProfileCard : FrameLayout {
 
-    private lateinit var binding : CardProfileBinding
+    private lateinit var binding: CardProfileBinding
+
     constructor(context: Context?) : this(context, null)
 
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -35,11 +33,9 @@ class ProfileCard : FrameLayout {
 
     }
 
-    fun setListApperance(image:String, name:String, email:String) {
-        //binding.icons.text = name
-        binding.profileDetails.text = email
-        val url : String = "https://i.pinimg.com/originals/e1/3f/8f/e13f8f41f980ceca3c9dfada02663870.png"
-        //Glide.with(this).load(url).apply(RequestOptions.circleCropTransform()).into(binding.profileImage)
-
+    fun setProfileDataApperance(data: String, icon: Int, menuField: Int) {
+        binding.profileDetails.text = data
+        binding.cardName.setText(menuField)
+        binding.icons.let { Glide.with(this).load(icon).into(it) }
     }
 }

@@ -2,12 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <android.support.constraint.ConstraintLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/image_size_small"
+        android:background="@color/white"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:minHeight="@dimen/min_height_of_profile_card">
 
         <ImageView
             android:id="@+id/icons"
@@ -22,10 +25,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_size_small"
+            android:layout_marginStart="@dimen/margin_padding_size_large"
+            android:textSize="@dimen/text_size_micro"
+            app:layout_constraintBottom_toTopOf="@+id/profile_details"
+            app:layout_constraintStart_toEndOf="@+id/icons"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="email" />
+
+        <TextView
             android:id="@+id/profile_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_padding_size_large"
+            android:layout_marginTop="@dimen/margin_padding_size_small"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/icons"

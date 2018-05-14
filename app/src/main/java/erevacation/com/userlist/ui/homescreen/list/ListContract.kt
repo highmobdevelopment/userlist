@@ -6,7 +6,8 @@ interface ListContract {
     interface ListView : ViperContract.View<ListPresenter> {
 
     }
+
     interface ListPresenter : ViperContract.Presenter {
-        fun openProfileScreen(user:String)
+        fun openProfileScreen(name: String, surname: String, image: String, profileInfoList: ArrayList<String>)
     }
 }
