@@ -1,5 +1,7 @@
 package erevacation.com.userlist.datamodel
 
+import com.erevacation.networking.networkmodel.ListNM
+
 data class ListDM(
      var name : String = "",
      var surname : String = "",
@@ -9,9 +11,26 @@ data class ListDM(
              var email : String,
              var phones : Phones = Phones("",""),
              var address : String) {
-        data class Phones(
-                var home : String,
-                var work : String)
+         data class Phones(
+                 var home: String,
+                 var work: String) {
+
+         constructor(phones: ListNM.Details.Phones) : this(
+                 phones.home,
+                 phones.work
+         )
+     }
+         constructor(details: ListNM.Details) : this(
+                 details.email,
+                 Phones(details.phones),
+                 details.address
+         )
 
    }
+    constructor(listNM: ListNM):this(
+            listNM.name,
+            listNM.surname,
+            listNM.image,
+            Details(listNM.contactDetails)
+    )
 }

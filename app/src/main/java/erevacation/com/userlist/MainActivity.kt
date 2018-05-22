@@ -6,7 +6,6 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import erevacation.com.userlist.injection.DaggerAppComponent
 import javax.inject.Inject
-//import erevacation.com.userlist.injection.DaggerAppComponent
 
 class MainActivity : Application(), HasActivityInjector {
 
