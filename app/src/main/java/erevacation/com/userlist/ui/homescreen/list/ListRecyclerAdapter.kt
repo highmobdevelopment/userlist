@@ -1,6 +1,7 @@
 package erevacation.com.userlist.ui.homescreen.list
 
 import android.support.v7.widget.RecyclerView
+import android.util.TimingLogger
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import erevacation.com.userlist.databinding.ViewHolderListBinding
@@ -33,7 +34,10 @@ class ListRecyclerAdapter(val presenter:ListFragmentPresenter)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
+        val timings = TimingLogger(ListRecyclerAdapter::class.java.simpleName, "onCreateViewHolder")
         val binding = ViewHolderListBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
+        timings.addSplit("onCreateViewHolder done")
+        timings.dumpToLog()
         return ListViewHolder(binding)
     }
 
